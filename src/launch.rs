@@ -1,5 +1,7 @@
 use ori::prelude::*;
 
+struct CanvasSet;
+
 #[allow(unused)]
 fn set_canvas<T>(content: impl View<T>, width: u32, height: u32) -> impl View<T> {
     on_event(content, move |cx, _, _| {
@@ -7,8 +9,6 @@ fn set_canvas<T>(content: impl View<T>, width: u32, height: u32) -> impl View<T>
         {
             use ori::winit::WinitWindow;
             use winit::platform::web::WindowExtWebSys;
-
-            struct CanvasSet;
 
             if cx.contains_context::<CanvasSet>() {
                 return;
@@ -39,7 +39,9 @@ struct ExampleDelegate;
 
 impl<T> Delegate<T> for ExampleDelegate {
     fn idle(&mut self, cx: &mut DelegateCx<T>, _data: &mut T) {
-        cx.cmd(());
+        if !cx.contains_context::<CanvasSet>() {
+            cx.cmd(());
+        }
     }
 
     fn event(&mut self, _cx: &mut DelegateCx<T>, _data: &mut T, _event: &Event) {}
