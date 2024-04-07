@@ -47,9 +47,9 @@ impl<T> Delegate<T> for ExampleDelegate {
 
 pub fn launch_example<T: 'static, V: View<T> + 'static>(
     data: T,
-    mut ui: impl FnMut(&mut T) -> V + 'static,
     width: u32,
     height: u32,
+    mut ui: impl FnMut(&mut T) -> V + 'static,
 ) {
     let window = WindowDescriptor::new();
 
