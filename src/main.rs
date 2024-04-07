@@ -42,7 +42,7 @@ fn show_example(example: &str) {
         "flex" => examples::flex_example(),
 
         /* padding */
-        "padding" => examples::padding_example(),
+        "pad" => examples::pad_example(),
 
         /* scroll */
         "scroll" => examples::scroll_example(),

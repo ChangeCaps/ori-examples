@@ -74,7 +74,7 @@ pub fn flex_example() {
     });
 }
 
-pub fn padding_example() {
+pub fn pad_example() {
     launch::launch_example((), 400, 300, |_| {
         let inner = container(pad(10.0, text!("Padded")));
         let view = container(pad(20.0, inner))
