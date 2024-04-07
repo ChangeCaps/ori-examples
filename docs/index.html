@@ -1,0 +1,12 @@
+<!DOCTYPE html><html><head>
+    
+<link rel="preload" href="/ori-examples-c07cef8d5db173ba_bg.wasm" crossorigin="anonymous" integrity="sha384-pHKTeiGlxxm2EKnFd-1I4zLduscNeQw83QcTleHNWkjMqCM2VlV0hjOuWUk1FVvn" as="fetch" type="application/wasm">
+<link rel="modulepreload" href="/ori-examples-c07cef8d5db173ba.js" crossorigin="anonymous" integrity="sha384-0ECab9VG8XTx_v9NBrrLQh4jGfJQoLZl46aLVEjvIrswo1rMckEveYu3R2lQeRKZ"></head>
+<body>
+
+<script type="module">
+import init, * as bindings from '/ori-examples-c07cef8d5db173ba.js';
+init('/ori-examples-c07cef8d5db173ba_bg.wasm');
+window.wasmBindings = bindings;
+
+</script></body></html>
