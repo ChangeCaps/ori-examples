@@ -58,5 +58,6 @@ pub fn launch_example<T: 'static, V: View<T> + 'static>(
     Launcher::new(data)
         .window(window, move |data| set_canvas(ui(data), width, height))
         .delegate(ExampleDelegate)
+        .style(Palette::dark())
         .launch();
 }
