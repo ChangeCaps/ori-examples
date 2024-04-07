@@ -10,8 +10,6 @@ fn set_canvas<T>(content: impl View<T>, width: u32, height: u32) -> impl View<T>
 
             struct CanvasSet;
 
-            info!("Setting canvas...");
-
             if cx.contains_context::<CanvasSet>() {
                 return;
             }
