@@ -40,6 +40,8 @@ jobs:
           default: true
 
       - name: Install trunk
+        # i dont know a better way of doing this
+        continue-on-error: true
         uses: actions-rs/install@v0.1
         with:
           crate: trunk
