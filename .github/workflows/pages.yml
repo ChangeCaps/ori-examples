@@ -44,7 +44,6 @@ jobs:
         with:
           crate: trunk
           version: latest
-          use-tool-cache: true
 
       - name: Build examples
         run: trunk build --release
