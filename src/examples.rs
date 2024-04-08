@@ -97,15 +97,25 @@ pub fn stack_example() {
         align: Align,
     }
 
-    fn justify_button(justify: Justify) -> impl View<Data> {
+    fn justify_button(data: &Data, justify: Justify) -> impl View<Data> {
         let label = text!("{:?}", justify).font_size(12.0);
-        let button = button(label).padding(4.0);
+        let mut button = button(label).padding(4.0);
+
+        if data.justify == justify {
+            button = button.color(palette().accent());
+        }
+
         on_click(button, move |_, data: &mut Data| data.justify = justify)
     }
 
-    fn align_button(align: Align) -> impl View<Data> {
+    fn align_button(data: &Data, align: Align) -> impl View<Data> {
         let label = text!("{:?}", align).font_size(12.0);
-        let button = button(label).padding(4.0);
+        let mut button = button(label).padding(4.0);
+
+        if data.align == align {
+            button = button.color(palette().accent())
+        }
+
         on_click(button, move |_, data: &mut Data| data.align = align)
     }
 
@@ -117,22 +127,22 @@ pub fn stack_example() {
     launch::launch_example(data, 400, 600, |data| {
         let justify = vstack![
             text!("Justify"),
-            justify_button(Justify::Start),
-            justify_button(Justify::Center),
-            justify_button(Justify::End),
-            justify_button(Justify::SpaceBetween),
-            justify_button(Justify::SpaceAround),
-            justify_button(Justify::SpaceEvenly),
+            justify_button(data, Justify::Start),
+            justify_button(data, Justify::Center),
+            justify_button(data, Justify::End),
+            justify_button(data, Justify::SpaceBetween),
+            justify_button(data, Justify::SpaceAround),
+            justify_button(data, Justify::SpaceEvenly),
         ]
         .align(Align::Stretch)
         .gap(8.0);
 
         let align = vstack![
             text!("Align"),
-            align_button(Align::Start),
-            align_button(Align::Center),
-            align_button(Align::End),
-            align_button(Align::Stretch),
+            align_button(data, Align::Start),
+            align_button(data, Align::Center),
+            align_button(data, Align::End),
+            align_button(data, Align::Stretch),
         ]
         .align(Align::Stretch)
         .gap(8.0);
