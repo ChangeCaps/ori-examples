@@ -1026,7 +1026,7 @@ dependencies = [
 [[package]]
 name = "ori"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/ChangeCaps/ori.git#0c235bc9a25e63ff9188f082c06e6709502d0fe2"
+source = "git+https://github.com/ChangeCaps/ori.git#1f7a9587db728eb627094bf2b14df119c49e20d6"
 dependencies = [
  "ori-core",
  "ori-font-awesome",
@@ -1037,7 +1037,7 @@ dependencies = [
 [[package]]
 name = "ori-core"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/ChangeCaps/ori.git#0c235bc9a25e63ff9188f082c06e6709502d0fe2"
+source = "git+https://github.com/ChangeCaps/ori.git#1f7a9587db728eb627094bf2b14df119c49e20d6"
 dependencies = [
  "bitflags 2.5.0",
  "cosmic-text",
@@ -1066,7 +1066,7 @@ dependencies = [
 [[package]]
 name = "ori-font-awesome"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/ChangeCaps/ori.git#0c235bc9a25e63ff9188f082c06e6709502d0fe2"
+source = "git+https://github.com/ChangeCaps/ori.git#1f7a9587db728eb627094bf2b14df119c49e20d6"
 dependencies = [
  "json",
  "ori-core",
@@ -1075,7 +1075,7 @@ dependencies = [
 [[package]]
 name = "ori-glow"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/ChangeCaps/ori.git#0c235bc9a25e63ff9188f082c06e6709502d0fe2"
+source = "git+https://github.com/ChangeCaps/ori.git#1f7a9587db728eb627094bf2b14df119c49e20d6"
 dependencies = [
  "glow",
  "glutin",
@@ -1087,7 +1087,7 @@ dependencies = [
 [[package]]
 name = "ori-macro"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/ChangeCaps/ori.git#0c235bc9a25e63ff9188f082c06e6709502d0fe2"
+source = "git+https://github.com/ChangeCaps/ori.git#1f7a9587db728eb627094bf2b14df119c49e20d6"
 dependencies = [
  "manyhow",
  "proc-macro-crate",
@@ -1099,7 +1099,7 @@ dependencies = [
 [[package]]
 name = "ori-winit"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/ChangeCaps/ori.git#0c235bc9a25e63ff9188f082c06e6709502d0fe2"
+source = "git+https://github.com/ChangeCaps/ori.git#1f7a9587db728eb627094bf2b14df119c49e20d6"
 dependencies = [
  "clipboard",
  "ori-core",

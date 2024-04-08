@@ -13,7 +13,7 @@ winit = "0.29"
 
 [dependencies.web-sys]
 version = "0.3"
-features = ["Window", "Location"]
+features = ["Window", "Location", "CanvasRenderingContext2d"]
 
 [dependencies.ori]
 git = "https://github.com/ChangeCaps/ori.git"

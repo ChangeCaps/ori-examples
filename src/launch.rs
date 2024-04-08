@@ -4,10 +4,11 @@ struct CanvasSet;
 
 #[allow(unused)]
 fn set_canvas<T>(content: impl View<T>, width: u32, height: u32) -> impl View<T> {
-    on_event(content, move |cx, _, _| {
+    on_draw(content, move |cx, _, _| {
         #[cfg(target_arch = "wasm32")]
         {
             use ori::winit::WinitWindow;
+            use web_sys::wasm_bindgen::JsCast;
             use winit::platform::web::WindowExtWebSys;
 
             if cx.contains_context::<CanvasSet>() {
