@@ -552,9 +552,9 @@ dependencies = [
 
 [[package]]
 name = "getrandom"
-version = "0.2.13"
+version = "0.2.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a06fddc2749e0528d2813f95e050e87e52c8cbbae56223b9babf73b3e53b0cc6"
+checksum = "94b22e06ecb0110981051723910cbf0b5f5e09a2062dd7663334ee79a9d1286c"
 dependencies = [
  "cfg-if",
  "libc",
@@ -1026,7 +1026,7 @@ dependencies = [
 [[package]]
 name = "ori"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/ChangeCaps/ori.git#1f7a9587db728eb627094bf2b14df119c49e20d6"
+source = "git+https://github.com/ChangeCaps/ori.git#970c255c7cd1399dd6e308cc396e65762078f3c5"
 dependencies = [
  "ori-core",
  "ori-font-awesome",
@@ -1037,7 +1037,7 @@ dependencies = [
 [[package]]
 name = "ori-core"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/ChangeCaps/ori.git#1f7a9587db728eb627094bf2b14df119c49e20d6"
+source = "git+https://github.com/ChangeCaps/ori.git#970c255c7cd1399dd6e308cc396e65762078f3c5"
 dependencies = [
  "bitflags 2.5.0",
  "cosmic-text",
@@ -1066,7 +1066,7 @@ dependencies = [
 [[package]]
 name = "ori-font-awesome"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/ChangeCaps/ori.git#1f7a9587db728eb627094bf2b14df119c49e20d6"
+source = "git+https://github.com/ChangeCaps/ori.git#970c255c7cd1399dd6e308cc396e65762078f3c5"
 dependencies = [
  "json",
  "ori-core",
@@ -1075,7 +1075,7 @@ dependencies = [
 [[package]]
 name = "ori-glow"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/ChangeCaps/ori.git#1f7a9587db728eb627094bf2b14df119c49e20d6"
+source = "git+https://github.com/ChangeCaps/ori.git#970c255c7cd1399dd6e308cc396e65762078f3c5"
 dependencies = [
  "glow",
  "glutin",
@@ -1087,7 +1087,7 @@ dependencies = [
 [[package]]
 name = "ori-macro"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/ChangeCaps/ori.git#1f7a9587db728eb627094bf2b14df119c49e20d6"
+source = "git+https://github.com/ChangeCaps/ori.git#970c255c7cd1399dd6e308cc396e65762078f3c5"
 dependencies = [
  "manyhow",
  "proc-macro-crate",
@@ -1099,7 +1099,7 @@ dependencies = [
 [[package]]
 name = "ori-winit"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/ChangeCaps/ori.git#1f7a9587db728eb627094bf2b14df119c49e20d6"
+source = "git+https://github.com/ChangeCaps/ori.git#970c255c7cd1399dd6e308cc396e65762078f3c5"
 dependencies = [
  "clipboard",
  "ori-core",
