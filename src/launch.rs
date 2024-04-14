@@ -39,13 +39,9 @@ fn set_canvas<T>(content: impl View<T>, width: u32, height: u32) -> impl View<T>
 struct ExampleDelegate;
 
 impl<T> Delegate<T> for ExampleDelegate {
-    fn idle(&mut self, cx: &mut DelegateCx<T>, _data: &mut T) {
-        if !cx.contains_context::<CanvasSet>() {
-            cx.cmd(());
-        }
+    fn event(&mut self, _cx: &mut DelegateCx<T>, _data: &mut T, _event: &Event) -> bool {
+        false
     }
-
-    fn event(&mut self, _cx: &mut DelegateCx<T>, _data: &mut T, _event: &Event) {}
 }
 
 pub fn launch_example<T: 'static, V: View<T> + 'static>(
@@ -56,9 +52,10 @@ pub fn launch_example<T: 'static, V: View<T> + 'static>(
 ) {
     let window = WindowDescriptor::new();
 
-    Launcher::new(data)
+    let app = App::build()
         .window(window, move |data| set_canvas(ui(data), width, height))
         .delegate(ExampleDelegate)
-        .style(Palette::dark())
-        .launch();
+        .style(Palette::dark());
+
+    ori::launch(app, data).unwrap();
 }
