@@ -1,5 +1,6 @@
 use ori::prelude::*;
 
+#[allow(unused)]
 struct CanvasSet;
 
 #[allow(unused)]

@@ -179,6 +179,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1fd0f2584146f6f2ef48085050886acf353beff7305ebd1ae69500e27c67f64b"
 
 [[package]]
+name = "byteorder-lite"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8f1fe948ff07f4bd06c30984e69f5b4899c516a3ef74f34df92a2df2ab535495"
+
+[[package]]
 name = "bytes"
 version = "1.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -212,12 +218,13 @@ dependencies = [
 
 [[package]]
 name = "cc"
-version = "1.0.94"
+version = "1.0.95"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "17f6e324229dc011159fcc089755d1e2e216a90d43a7dea6853ca740b84f35e7"
+checksum = "d32a725bc159af97c3e629873bb9f88fb8cf8a4867175f76dc987815ea07c83b"
 dependencies = [
  "jobserver",
  "libc",
+ "once_cell",
 ]
 
 [[package]]
@@ -688,11 +695,11 @@ dependencies = [
 
 [[package]]
 name = "image-webp"
-version = "0.1.1"
+version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7a84a25dcae3ac487bc24ef280f9e20c79c9b1a3e5e32cbed3041d1c514aa87c"
+checksum = "d730b085583c4d789dfd07fdcf185be59501666a90c97c40162b37e4fdad272d"
 dependencies = [
- "byteorder",
+ "byteorder-lite",
  "thiserror",
 ]
 
@@ -980,9 +987,9 @@ dependencies = [
 
 [[package]]
 name = "objc-sys"
-version = "0.3.2"
+version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c7c71324e4180d0899963fc83d9d241ac39e699609fc1025a850aadac8257459"
+checksum = "da284c198fb9b7b0603f8635185e85fbd5b64ee154b1ed406d489077de2d6d60"
 
 [[package]]
 name = "objc2"
@@ -1027,7 +1034,7 @@ dependencies = [
 [[package]]
 name = "ori"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/ChangeCaps/ori.git#eaa276e52913484a7ff0aaebf2c95df371337b0f"
+source = "git+https://github.com/ChangeCaps/ori.git#0c3477ec20d86c66d888d017fe4140b34ff681c6"
 dependencies = [
  "ori-app",
  "ori-core",
@@ -1039,7 +1046,7 @@ dependencies = [
 [[package]]
 name = "ori-app"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/ChangeCaps/ori.git#eaa276e52913484a7ff0aaebf2c95df371337b0f"
+source = "git+https://github.com/ChangeCaps/ori.git#0c3477ec20d86c66d888d017fe4140b34ff681c6"
 dependencies = [
  "instant",
  "ori-core",
@@ -1048,7 +1055,7 @@ dependencies = [
 [[package]]
 name = "ori-core"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/ChangeCaps/ori.git#eaa276e52913484a7ff0aaebf2c95df371337b0f"
+source = "git+https://github.com/ChangeCaps/ori.git#0c3477ec20d86c66d888d017fe4140b34ff681c6"
 dependencies = [
  "bitflags 2.5.0",
  "cosmic-text",
@@ -1077,7 +1084,7 @@ dependencies = [
 [[package]]
 name = "ori-font-awesome"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/ChangeCaps/ori.git#eaa276e52913484a7ff0aaebf2c95df371337b0f"
+source = "git+https://github.com/ChangeCaps/ori.git#0c3477ec20d86c66d888d017fe4140b34ff681c6"
 dependencies = [
  "json",
  "ori-core",
@@ -1087,7 +1094,7 @@ dependencies = [
 [[package]]
 name = "ori-glow"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/ChangeCaps/ori.git#eaa276e52913484a7ff0aaebf2c95df371337b0f"
+source = "git+https://github.com/ChangeCaps/ori.git#0c3477ec20d86c66d888d017fe4140b34ff681c6"
 dependencies = [
  "glow",
  "glutin",
@@ -1099,7 +1106,7 @@ dependencies = [
 [[package]]
 name = "ori-macro"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/ChangeCaps/ori.git#eaa276e52913484a7ff0aaebf2c95df371337b0f"
+source = "git+https://github.com/ChangeCaps/ori.git#0c3477ec20d86c66d888d017fe4140b34ff681c6"
 dependencies = [
  "manyhow",
  "proc-macro-crate",
@@ -1111,7 +1118,7 @@ dependencies = [
 [[package]]
 name = "ori-winit"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/ChangeCaps/ori.git#eaa276e52913484a7ff0aaebf2c95df371337b0f"
+source = "git+https://github.com/ChangeCaps/ori.git#0c3477ec20d86c66d888d017fe4140b34ff681c6"
 dependencies = [
  "clipboard",
  "ori-app",
@@ -1208,9 +1215,9 @@ dependencies = [
 
 [[package]]
 name = "proc-macro2"
-version = "1.0.79"
+version = "1.0.81"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e835ff2298f5721608eb1a980ecaee1aef2c132bf95ecc026a11b7bf3c01c02e"
+checksum = "3d1597b0c024618f09a9c3b8655b7e430397a36d23fdafec26d6965e9eec3eba"
 dependencies = [
  "unicode-ident",
 ]
@@ -1407,18 +1414,18 @@ checksum = "58bf37232d3bb9a2c4e641ca2a11d83b5062066f88df7fed36c28772046d65ba"
 
 [[package]]
 name = "serde"
-version = "1.0.197"
+version = "1.0.198"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3fb1c873e1b9b056a4dc4c0c198b24c3ffa059243875552b2bd0933b1aee4ce2"
+checksum = "9846a40c979031340571da2545a4e5b7c4163bdae79b301d5f86d03979451fcc"
 dependencies = [
  "serde_derive",
 ]
 
 [[package]]
 name = "serde_derive"
-version = "1.0.197"
+version = "1.0.198"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7eb0b34b42edc17f6b7cac84a52a1c5f0e1bb2227e997ca9011ea3dd34e8610b"
+checksum = "e88edab869b01783ba905e7d0153f9fc1a6505a96e4ad3018011eedb838566d9"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1523,9 +1530,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "2.0.58"
+version = "2.0.60"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "44cfb93f38070beee36b3fef7d4f5a16f27751d94b187b666a5cc5e9b0d30687"
+checksum = "909518bc7b1c9b779f1bbf07f2929d35af9f0f37e47c6e9ef7f9dddc1e1821f3"
 dependencies = [
  "proc-macro2",
  "quote",

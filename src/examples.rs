@@ -12,7 +12,7 @@ pub fn align_example(alignment: Alignment) {
     launch::launch_example(alignment, 400, 300, |alignment| {
         let content = align(*alignment, button(text!("Align")));
         let view = container(content)
-            .background(palette().background())
+            .background(palette().base)
             .border_width(1.0);
 
         pad(20.0, view)
@@ -78,7 +78,7 @@ pub fn pad_example() {
     launch::launch_example((), 400, 300, |_| {
         let inner = container(pad(10.0, text!("Padded")));
         let view = container(pad(20.0, inner))
-            .background(palette().background())
+            .background(palette().base)
             .border_width(1.0);
 
         center(view)
@@ -98,22 +98,32 @@ pub fn stack_example() {
     }
 
     fn justify_button(data: &Data, justify: Justify) -> impl View<Data> {
-        let label = text!("{:?}", justify).font_size(12.0);
+        let mut label = text!("{:?}", justify).font_size(12.0);
+
+        if data.justify == justify {
+            label = label.color(palette().surface);
+        }
+
         let mut button = button(label).padding(4.0);
 
         if data.justify == justify {
-            button = button.color(palette().accent());
+            button = button.color(palette().accent);
         }
 
         on_click(button, move |_, data: &mut Data| data.justify = justify)
     }
 
     fn align_button(data: &Data, align: Align) -> impl View<Data> {
-        let label = text!("{:?}", align).font_size(12.0);
+        let mut label = text!("{:?}", align).font_size(12.0);
+
+        if data.align == align {
+            label = label.color(palette().surface);
+        }
+
         let mut button = button(label).padding(4.0);
 
         if data.align == align {
-            button = button.color(palette().accent())
+            button = button.color(palette().accent)
         }
 
         on_click(button, move |_, data: &mut Data| data.align = align)
@@ -196,7 +206,7 @@ pub fn tooltip_example() {
 
 pub fn wrap_example() {
     fn item() -> impl View {
-        let view = background(palette().primary(), ()).border_radius(4.0);
+        let view = background(palette().primary, ()).border_radius(4.0);
 
         size(50.0, view)
     }
@@ -226,7 +236,7 @@ pub fn transform_example() {
 
 pub fn zstack_example() {
     fn item() -> impl View {
-        let view = background(palette().accent_lighter().desaturate(0.5), ()).border_radius(4.0);
+        let view = background(palette().accent, ()).border_radius(4.0);
 
         size(50.0, view)
     }
